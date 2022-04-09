@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         getButtonId();
 
         calcButton.setOnClickListener((View view) -> redirectToCalc());
+        colorChangeButton.setOnClickListener((View view) -> redirectToColorChange());
     }
 
     private void getButtonId() {
@@ -28,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
     private void redirectToCalc() {
         Intent intent = new Intent();
         intent.setClass(MainActivity.this, CalculatorActivity.class);
+        startActivity(intent);
+    }
+
+    private void redirectToColorChange() {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this, ColorChangeActivity.class);
         startActivity(intent);
     }
 }

@@ -24,4 +24,5 @@
         android:text="@string/color_change"
         android:textSize="18dp" />
 
+
 </LinearLayout>
