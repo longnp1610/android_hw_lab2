@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NguyenPhiLong_18521043">
         <activity
+            android:name=".ShowContactInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContactInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ColorChangeActivity"
             android:exported="false" />
         <activity

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button calcButton, colorChangeButton;
+    Button calcButton, colorChangeButton, contactInfoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
         calcButton.setOnClickListener((View view) -> redirectToCalc());
         colorChangeButton.setOnClickListener((View view) -> redirectToColorChange());
+        contactInfoButton.setOnClickListener((View view) -> redirectToContactInfo());
     }
 
     private void getButtonId() {
-        calcButton = (Button) findViewById(R.id.calculator_btn);
-        colorChangeButton = (Button) findViewById(R.id.colorChange_btn);
+        calcButton = findViewById(R.id.calculator_btn);
+        colorChangeButton = findViewById(R.id.colorChange_btn);
+        contactInfoButton = findViewById(R.id.contactInfo_btn);
     }
 
     private void redirectToCalc() {
@@ -35,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
     private void redirectToColorChange() {
         Intent intent = new Intent();
         intent.setClass(MainActivity.this, ColorChangeActivity.class);
+        startActivity(intent);
+    }
+
+    private void redirectToContactInfo() {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this, ContactInfoActivity.class);
         startActivity(intent);
     }
 }
